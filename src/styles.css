@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Full-screen container for the canvas */
+  .canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Toggle button */
+  .toggle-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; /* Ensure button is above the canvas */
+  }
+  
+  .toggle-button:hover {
+    background: rgba(0, 0, 0, 1);
+  }
+  
+  /* Controls overlay */
+  .controls {
+    position: absolute;
+    top: 0;
+    left: -300px; /* Hide controls by default */
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: left 0.3s ease-in-out; /* Smooth slide animation */
+    z-index: 10; /* Ensure controls are above the canvas */
+    overflow-y: auto; /* Make controls scrollable */
+  }
+  
+  .controls.visible {
+    left: 0; /* Slide in when visible */
+  }
+  
+  .controls h3 {
+    margin-top: 0;
+  }
+  
+  .controls label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .controls input[type="range"] {
+    width: 100%;
+  }
